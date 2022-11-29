@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "sistemaventas2022#"
+      MYSQL_DATABASE: "sistemaventasmulti"
+      MYSQL_USER: "test"
+      MYSQL_PASSWORD: "sistemaventas2022#"
+    volumes:
+      - ./db_data:/var/lib/mysql
